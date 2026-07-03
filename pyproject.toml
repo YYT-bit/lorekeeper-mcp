@@ -19,7 +19,8 @@ dependencies = [
     "edn-format>=0.7.5",
     "pymilvus>=2.4.0",
     "sentence-transformers>=2.2.0",
-    "milvus-lite>=2.4.0",
+    # milvus-lite 仅在非 Windows 平台可用（Windows 无 wheel）
+    "milvus-lite>=2.4.0; sys_platform != 'win32'",
 ]
 
 [project.scripts]
